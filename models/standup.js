@@ -6,7 +6,7 @@ const standupSchema = new Schema({
     project       : { type: String },
     workYesterday : { type: String },
     workToday     : { type: String },
-    impediments   : { type: String},
+    impediments   : { type: String },
     createdOn     : { type: Date, default: Date.now }
 }, {
     timestamps : { createdAt: 'created_At', updatedAt: 'modified_At'}

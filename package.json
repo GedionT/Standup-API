@@ -1,12 +1,16 @@
 {
   "name": "standapp_server",
   "version": "1.0.0",
-  "description": "",
+  "description": "Daily stand-up and Scrum application for virtual meetings",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
     "lint": "./node_modules/.bin/eslint **/*.js"
   },
   "author": "GedionT",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.8.3"
+  }
 }
