@@ -1,7 +1,7 @@
 const express     = require('express')
-// const logger      = require('morgan')
+const logger      = require('morgan')
 const bodyParser  = require('body-parser')
-// const cors        = require('cors')
+const cors        = require('cors')
 const api = require('./api')
 
 const app = express()
@@ -9,11 +9,11 @@ const app = express()
 app.set('port', (process.env.PORT || 8081))
 
 // middleware
-// app.use(logger('dev'))
+app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(express.static('static'))
-// app.use(cors())
+app.use(cors())
 
 // route
 app.use('/api', api)
