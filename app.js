@@ -5,7 +5,6 @@ const cors        = require('cors')
 const api = require('./api')
 
 const app = express()
-
 app.set('port', (process.env.PORT || 8081))
 
 // middleware
@@ -36,8 +35,5 @@ db.once('open', () => {
 })
 
 app.listen(app.get('port'), function() {
-    console.log(`API Server Listening on port ${8081}`)
+    console.log(`API Server Listening on port ${app.get('port')}`)
 })
-
-
-
